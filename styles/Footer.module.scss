@@ -1,0 +1,53 @@
+@use "./colors";
+
+.footer {
+  background: radial-gradient(ellipse at 50% -65%, #1c64f280 20%, #08102700 55%)
+    #121825;
+}
+
+.footer_wrapper {
+  margin-inline: 16.5%;
+}
+
+.footer_header {
+  color: #616d8d;
+  font-weight: 600;
+}
+
+.footer_link {
+  &:hover {
+    color: #1c64f2;
+  }
+}
+
+.icon {
+  svg {
+    path {
+      fill: white;
+    }
+  }
+}
+
+.icon:hover {
+  svg {
+    path {
+      fill: colors.$accent_blue;
+    }
+  }
+}
+
+.blog_icon {
+  svg {
+    circle {
+      fill: white;
+    }
+  }
+}
+
+.blog_icon:hover {
+  svg {
+    circle {
+      fill: colors.$accent_blue;
+    }
+  }
+}

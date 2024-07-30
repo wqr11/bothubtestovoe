@@ -17,4 +17,18 @@
   background-color: #1c64f2;
   border-radius: 8px;
   box-shadow: 0px 1px 1px 0px rgba(255, 255, 255, 0.4) inset;
+}
+
+.icon:hover {
+  color: #1c64f2;
+}
+.icon:hover .arrow_down svg path {
+  stroke: #1c64f2;
+}
+
+.lang_icon:hover {
+  color: #1c64f2;
+}
+.lang_icon:hover .lang_button svg path {
+  fill: #1c64f2;
 }/*# sourceMappingURL=Navbar.module.css.map */

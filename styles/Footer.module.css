@@ -1,0 +1,32 @@
+.footer {
+  background: radial-gradient(ellipse at 50% -65%, rgba(28, 100, 242, 0.5019607843) 20%, rgba(8, 16, 39, 0) 55%) #121825;
+}
+
+.footer_wrapper {
+  margin-inline: 16.5%;
+}
+
+.footer_header {
+  color: #616d8d;
+  font-weight: 600;
+}
+
+.footer_link:hover {
+  color: #1c64f2;
+}
+
+.icon svg path {
+  fill: white;
+}
+
+.icon:hover svg path {
+  fill: #1c64f2;
+}
+
+.blog_icon svg circle {
+  fill: white;
+}
+
+.blog_icon:hover svg circle {
+  fill: #1c64f2;
+}/*# sourceMappingURL=Footer.module.css.map */

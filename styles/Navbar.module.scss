@@ -1,20 +1,45 @@
+@use "./colors";
+
 .logo_wrapper {
-	margin-left: 16.4%;
-	margin-right: 24px;
-	padding-right: 24px;
-	border-right: 1px solid #222b44;
+  margin-left: 16.4%;
+  margin-right: 24px;
+  padding-right: 24px;
+  border-right: 1px solid #222b44;
 }
 
 .navlinks {
-	margin-right: 14px;
-	width: 47%;
-	gap: 34px;
+  margin-right: 14px;
+  width: 47%;
+  gap: 34px;
 }
 
 .login_button {
-	margin-left: 34px;
-	font-size: 15px;
-	background-color: #1c64f2;
-	border-radius: 8px;
-	box-shadow: 0px 1px 1px 0px #ffffff66 inset;
+  margin-left: 34px;
+  font-size: 15px;
+  background-color: #1c64f2;
+  border-radius: 8px;
+  box-shadow: 0px 1px 1px 0px #ffffff66 inset;
+}
+
+.icon:hover {
+  color: colors.$accent_blue;
+  .arrow_down {
+    svg {
+      path {
+        // fill: colors.$accent_blue;
+        stroke: colors.$accent_blue;
+      }
+    }
+  }
+}
+
+.lang_icon:hover {
+  color: colors.$accent_blue;
+  .lang_button {
+    svg {
+      path {
+        fill: colors.$accent_blue;
+      }
+    }
+  }
 }
