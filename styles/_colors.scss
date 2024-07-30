@@ -1,3 +1,7 @@
 $accent_blue: #1c64f2;
 $background_dark_nav: #121825;
 $background_dark_home: #0e0c15;
+
+@mixin shadowOnTop {
+  box-shadow: 0px 1px 1px 0px #ffffff66 inset;
+}

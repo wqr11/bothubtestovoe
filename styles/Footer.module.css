@@ -2,8 +2,39 @@
   background: radial-gradient(ellipse at 50% -65%, rgba(28, 100, 242, 0.5019607843) 20%, rgba(8, 16, 39, 0) 55%) #121825;
 }
 
-.footer_wrapper {
-  margin-inline: 16.5%;
+@media (width <= 1320px) {
+  .footer_wrapper {
+    display: block;
+  }
+}
+@media (width <= 920px) {
+  .section_wrapper {
+    flex-direction: column;
+  }
+  .footer_wrapper {
+    margin-inline: auto;
+  }
+}
+@media (width <= 480px) {
+  .footer_section_one {
+    flex-direction: column;
+  }
+  .footer_section_two {
+    flex-direction: column;
+  }
+}
+.section_wrapper {
+  display: flex;
+}
+
+.footer_section_one {
+  display: flex;
+  gap: 73px;
+}
+
+.footer_section_two {
+  display: flex;
+  gap: 73px;
 }
 
 .footer_header {
@@ -11,6 +42,12 @@
   font-weight: 600;
 }
 
+.footer_link {
+  width: -moz-max-content;
+  width: max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
 .footer_link:hover {
   color: #1c64f2;
 }
