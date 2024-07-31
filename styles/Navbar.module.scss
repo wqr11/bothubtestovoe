@@ -8,9 +8,11 @@
 }
 
 .navbar {
-  backdrop-filter: blur(20px);
-  background-color: rgb(18, 24, 37, 0.8);
+  backdrop-filter: blur(15px);
+  // background-color: rgb(18, 24, 37);
+  background-color: transparent;
   border-bottom: 1px solid #222b44;
+  z-index: 100;
 }
 
 @media (width <= 1024px) {

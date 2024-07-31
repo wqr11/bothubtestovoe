@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={IBMPlexSans.className}>
+      <body className={`${IBMPlexSans.className} bg-[#0f0f1a]`}>
         <Navbar />
         <main>{children}</main>
         <Footer />

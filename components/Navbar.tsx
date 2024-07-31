@@ -13,7 +13,7 @@ import Navlinks from "./Navlinks";
 const Navbar = () => {
   return (
     <nav
-      className={`${styles.navbar} flex text-white items-center h-[80px] w-full lg:justify-evenly fixed`}
+      className={`${styles.navbar} flex text-white items-center h-[80px] w-full lg:justify-evenly sticky top-0 left-0`}
     >
       <div className="flex">
         <div className={`${styles.logo_wrapper} font-bold text-3xl`}>

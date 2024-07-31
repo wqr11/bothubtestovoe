@@ -1,0 +1,21 @@
+.card_wrapper {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background: radial-gradient(ellipse at 0% 0%, rgb(28, 100, 242) -200%, #121825 90%);
+  border-radius: 12px;
+}
+
+.card_wrapper::after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  background: linear-gradient(135deg, #1c64f2 25%, rgba(28, 100, 242, 0) 40%);
+  border-radius: 12px;
+  z-index: -1;
+}/*# sourceMappingURL=AbilitiesCard.module.css.map */
