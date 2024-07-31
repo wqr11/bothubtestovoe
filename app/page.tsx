@@ -48,7 +48,7 @@ const Home = () => {
   return (
     <div className={styles.homepage}>
       <div className={`${styles.landing} lg:flex lg:w-[70%] m-auto gap-[30px]`}>
-        <div className="lg:w-[40%] flex flex-col gap-2 mx-[40px] lg:text-start text-center">
+        <div className="lg:w-[40%] flex flex-col gap-2 mx-[40px] lg:text-start text-center my-auto">
           <h1 className="font-bold lg:text-[46px] sm:text-[40px] text-[28px] lg:block hidden">
             {mainText.lg.title}
           </h1>
@@ -73,7 +73,7 @@ const Home = () => {
         ></div>
       </div>
       <div className="ml-2">
-        <h2 className="font-semibold text-center mt-[86px] mb-[42px]">
+        <h2 className="font-semibold text-center mt-[60px] mb-[42px]">
           Возможности ChatGPT
         </h2>
         <div className="grid gap-[30px] xl:grid-cols-3 md:grid-cols-2 grid-cols-1 max-w-[70%] size-fit m-auto">
@@ -86,9 +86,7 @@ const Home = () => {
           ))}
         </div>
       </div>
-      <div
-        className={`${styles.midjourney} mt-[86px] w-[70%] m-auto flex xl:justify-between flex-col xl:flex-row items-center gap-[30px]`}
-      >
+      <div className="mt-[86px] w-[70%] m-auto flex xl:justify-between flex-col xl:flex-row items-center gap-[30px]">
         <Image
           className={styles.midjourney_image}
           src={midJourneyImage}

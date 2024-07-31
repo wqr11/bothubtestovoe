@@ -1,20 +1,25 @@
 import Link from "next/link";
 import styles from "@/styles/Navbar.module.css";
 
+import TgColored from "@/public/tg-colored.svg";
+
 import ArrowDown from "@/public/arrow-down.svg";
+import ProductsDropdown from "./ProductsDropdown";
 
 const Navlinks = () => {
   return (
     <>
-      <Link
-        href=""
-        className={`${styles.icon} ${styles.products_wrapper} flex gap-[8px] items-center`}
+      <div
+        className={`${styles.products_wrapper} ${styles.navlink} ${styles.icon}`}
       >
-        <span className={styles.navlink}>Продукты</span>
-        <span className={`${styles.arrow_down}`}>
-          <ArrowDown />
-        </span>
-      </Link>
+        <Link href="" className={`flex gap-[8px] items-center`}>
+          Продукты
+          <span className={styles.arrow_down}>
+            <ArrowDown />
+          </span>
+        </Link>
+        <ProductsDropdown />
+      </div>
       <Link href="" className={styles.navlink}>
         Пакеты
       </Link>

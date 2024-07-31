@@ -4,6 +4,7 @@ import Link from "next/link";
 import ArrowDown from "@/public/arrow-down.svg";
 import Lang from "@/public/lang.svg";
 import Logo from "@/public/logo.svg";
+import Business from "@/public/business-colored.svg";
 
 //
 import styles from "@/styles/Navbar.module.css";
@@ -15,14 +16,14 @@ const Navbar = () => {
     <nav
       className={`${styles.navbar} flex text-white items-center h-[80px] w-full lg:justify-evenly sticky top-0 left-0`}
     >
-      <div className="flex">
+      <div className="flex h-full">
         <div className={`${styles.logo_wrapper} font-bold text-3xl`}>
           <Link href="/">
             <Logo />
           </Link>
         </div>
         <div
-          className={`${styles.navlinks} hidden font-semibold items-center lg:flex`}
+          className={`${styles.navlinks} hidden font-semibold items-center lg:flex relative h-full`}
         >
           <Navlinks />
         </div>

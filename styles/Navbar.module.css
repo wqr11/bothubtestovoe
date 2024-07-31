@@ -3,7 +3,7 @@
           backdrop-filter: blur(15px);
   background-color: transparent;
   border-bottom: 1px solid #222b44;
-  z-index: 100;
+  z-index: 20;
 }
 
 @media (width <= 1024px) {
@@ -13,10 +13,18 @@
   .products_wrapper {
     justify-content: space-between;
   }
+  .navlink {
+    height: auto !important;
+  }
+  .products_dropdown {
+    background-color: #121825;
+    border-radius: 0 !important;
+  }
 }
 .logo_wrapper {
-  margin-left: 40px;
-  margin-right: 24px;
+  margin: auto 24px auto 40px;
+  height: -moz-fit-content;
+  height: fit-content;
   padding-right: 24px;
   border-right: 1px solid #222b44;
 }
@@ -25,7 +33,46 @@
   gap: 34px;
 }
 
-.navlink:hover {
+.icon_premium_gradient {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #1c64f2 -0.39%, #d41cf2 99.61%);
+}
+
+.arrow_down {
+  transition: transform 0.1s linear;
+}
+
+.products_wrapper:hover .arrow_down, .products_wrapper:focus-within .arrow_down {
+  transform: rotate(180deg);
+}
+.products_wrapper:hover .products_dropdown, .products_wrapper:focus-within .products_dropdown {
+  display: grid;
+}
+
+@keyframes popUp {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.products_dropdown {
+  display: none;
+  animation: popUp 0.2s ease-in-out 1;
+}
+
+.navlink {
+  align-content: center;
+  height: 100%;
+}
+.navlink:hover, .navlink:focus-within {
   color: #1c64f2;
 }
 
@@ -40,10 +87,10 @@
   background-color: #073ca4;
 }
 
-.icon:hover {
+.icon:hover, .icon:focus-within {
   color: #1c64f2;
 }
-.icon:hover .arrow_down svg path {
+.icon:hover .arrow_down svg path, .icon:focus-within .arrow_down svg path {
   stroke: #1c64f2;
 }
 
@@ -67,14 +114,13 @@
 
 @keyframes scrollPopUp {
   from {
-    transform: translateY(-400px);
+    transform: translateY(-200px);
   }
   to {
     transform: translateY(0);
   }
 }
 .menu_button_links {
-  animation-name: scrollPopUp;
-  animation-iteration-count: 1;
-  animation-duration: 200ms;
+  z-index: -10;
+  animation: scrollPopUp 0.1s linear;
 }/*# sourceMappingURL=Navbar.module.css.map */
