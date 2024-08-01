@@ -15,7 +15,7 @@ const MenuButton = () => {
   const [menuHidden, setMenuHidden] = useState(true);
 
   return (
-    <div className="lg:hidden">
+    <>
       <button
         onClick={(e: React.PointerEvent<HTMLButtonElement>) => {
           e.preventDefault();
@@ -28,7 +28,7 @@ const MenuButton = () => {
       </button>
       {!menuHidden && (
         <div
-          className={`${styles.menu_button_links} p-[40px] flex flex-col absolute w-full top-[80px] left-0 bg-black gap-[37px] text-[18px] font-semibold h-[100vh]`}
+          className={`${styles.menu_button_links} p-[40px] flex flex-col absolute w-full top-[80px] left-0 bg-black gap-[37px] text-[18px] font-semibold h-[100vh] lg:hidden -z-10`}
         >
           <Navlinks />
           <Link
@@ -39,7 +39,7 @@ const MenuButton = () => {
           </Link>
         </div>
       )}
-    </div>
+    </>
   );
 };
 

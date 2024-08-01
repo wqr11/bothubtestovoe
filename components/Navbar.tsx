@@ -13,7 +13,7 @@ import Navlinks from "./Navlinks";
 
 const Navbar = () => {
   return (
-    <nav
+    <header
       className={`${styles.navbar} flex text-white items-center h-[80px] w-full lg:justify-evenly sticky top-0 left-0`}
     >
       <div className="flex h-full">
@@ -47,7 +47,7 @@ const Navbar = () => {
         </button>
         <MenuButton />
       </div>
-    </nav>
+    </header>
   );
 };
 

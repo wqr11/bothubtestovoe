@@ -8,11 +8,18 @@
 }
 
 .navbar {
-  backdrop-filter: blur(15px);
-  // background-color: rgb(18, 24, 37);
-  background-color: transparent;
   border-bottom: 1px solid #222b44;
   z-index: 20;
+}
+
+.navbar::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(15px);
+  background-color: transparent;
+  z-index: -1;
 }
 
 @media (width <= 1024px) {
@@ -43,8 +50,8 @@
 }
 
 .icon_premium_gradient {
-  width: fit-content;
-  height: fit-content;
+  min-width: max-content;
+  min-height: max-content;
   border-radius: 10px;
   background: linear-gradient(90deg, #1c64f2 -0.39%, #d41cf2 99.61%);
 }
@@ -138,7 +145,7 @@
 
 @keyframes scrollPopUp {
   from {
-    transform: translateY(-200px);
+    transform: translateY(-400px);
   }
   to {
     transform: translateY(0);
@@ -147,5 +154,5 @@
 
 .menu_button_links {
   z-index: -10;
-  animation: scrollPopUp 0.1s linear;
+  animation: scrollPopUp 0.15s linear;
 }
