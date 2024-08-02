@@ -1,14 +1,13 @@
 import Link from "next/link";
 
 // icons
-import ArrowDown from "@/public/arrow-down.svg";
-import Lang from "@/public/lang.svg";
 import Logo from "@/public/logo.svg";
 
 //
 import styles from "@/styles/Navbar.module.css";
 import MenuButton from "./MenuButton";
 import Navlinks from "./Navlinks";
+import LangButton from "./LangButton";
 
 const Navbar = () => {
   return (
@@ -28,17 +27,7 @@ const Navbar = () => {
         </div>
       </div>
       <div className="flex mr-[40px] items-center ml-auto lg:m-0">
-        <div
-          className={`${styles.icon} ${styles.lang_icon} flex gap-[6px] items-center hover:cursor-pointer `}
-        >
-          <span className={`${styles.lang_button} lang-button`}>
-            <Lang />
-          </span>
-          <h6 className="font-bold">RU</h6>
-          <span className={`${styles.arrow_down}`}>
-            <ArrowDown />
-          </span>
-        </div>
+        <LangButton />
         <button
           className={`${styles.login_button} ml-[34px] font-medium py-[10px] px-[18px] sm:block hidden`}
         >

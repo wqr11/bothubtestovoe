@@ -102,11 +102,35 @@
   stroke: #1c64f2;
 }
 
-.lang_icon:hover {
+.lang_icon:hover, .lang_icon:focus-within {
   color: #1c64f2;
 }
-.lang_icon:hover .lang_button svg path {
+.lang_icon:hover .lang_button svg path, .lang_icon:focus-within .lang_button svg path {
   fill: #1c64f2;
+}
+.lang_icon:hover .arrow_down svg path, .lang_icon:focus-within .arrow_down svg path {
+  stroke: #1c64f2;
+}
+
+@keyframes langDropdownAnimation {
+  from {
+    transform: translateY(-100px) scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+.lang_dropdown {
+  animation: langDropdownAnimation 0.2s linear 1;
+}
+
+.lang_dropdown_link {
+  color: white !important;
+}
+.lang_dropdown_link:hover {
+  color: #4785ff !important;
 }
 
 .menu_button {

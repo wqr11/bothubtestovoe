@@ -121,7 +121,8 @@
 }
 
 .lang_icon {
-  &:hover {
+  &:hover,
+  &:focus-within {
     color: colors.$accent_blue;
     .lang_button {
       svg {
@@ -130,6 +131,35 @@
         }
       }
     }
+    .arrow_down {
+      svg {
+        path {
+          stroke: colors.$accent_blue;
+        }
+      }
+    }
+  }
+}
+
+@keyframes langDropdownAnimation {
+  from {
+    transform: translateY(-100px) scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.lang_dropdown {
+  animation: langDropdownAnimation 0.2s linear 1;
+}
+
+.lang_dropdown_link {
+  color: white !important;
+  &:hover {
+    color: #4785ff !important;
   }
 }
 
