@@ -4,7 +4,6 @@ import Link from "next/link";
 import ArrowDown from "@/public/arrow-down.svg";
 import Lang from "@/public/lang.svg";
 import Logo from "@/public/logo.svg";
-import Business from "@/public/business-colored.svg";
 
 //
 import styles from "@/styles/Navbar.module.css";

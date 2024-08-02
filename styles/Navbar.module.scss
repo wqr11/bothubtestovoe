@@ -9,7 +9,7 @@
 
 .navbar {
   border-bottom: 1px solid #222b44;
-  z-index: 20;
+  z-index: 50;
 }
 
 .navbar::after {
@@ -154,5 +154,5 @@
 
 .menu_button_links {
   z-index: -10;
-  animation: scrollPopUp 0.15s linear;
+  animation: scrollPopUp 0.2s ease-out;
 }

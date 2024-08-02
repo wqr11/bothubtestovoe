@@ -12,12 +12,12 @@ const Navlinks = () => {
       <div
         className={`${styles.products_wrapper} ${styles.navlink} ${styles.icon}`}
       >
-        <Link href="" className={`flex gap-[8px] items-center`}>
+        <button className={`flex gap-[8px] items-center`}>
           Продукты
           <span className={styles.arrow_down}>
             <ArrowDown />
           </span>
-        </Link>
+        </button>
         <ProductsDropdown />
       </div>
       <Link href="" className={styles.navlink}>
