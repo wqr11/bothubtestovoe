@@ -55,7 +55,9 @@ const Dialogue = () => {
     >
       <div className="w-full border-[#374151] border-b-[1px] flex px-[24px] py-[16px] items-center flex-wrap gap-[16px] justify-between">
         <div className="flex gap-[12px]">
-          <Avatar />
+          <span className="size-max">
+            <Avatar />
+          </span>
           <div>
             <h5 className="font-normal text-[16px]">
               BotHub: ChatGPT & Midjourney
