@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, use } from "react";
+import { useState, useRef, use, useEffect } from "react";
 
 import getChatCompletion from "@/actions/getChatCompletion";
 import { ChatCompletionRequestMessage } from "openai-edge";
@@ -29,6 +29,25 @@ const Dialogue = () => {
   const [messages, setMessages] = useState<ChatCompletionRequestMessage[]>([]);
 
   const scrollRef = useRef(null);
+
+  useEffect(() => {
+    for (let i = 0; i < initialMessages.length; i++) {
+      setTimeout(() => {
+        setMessages((messages) => [...messages, initialMessages[i]]);
+      }, i * 1000); // RUNS TWICE IN DEV MODE, BEFORE CHECKING FOR BUGS SET reactStrictMode : false IN next.config.mjs !!!
+    }
+  }, []);
+
+  if (typeof window !== "undefined") {
+    document
+      .getElementById("text-area-input")
+      ?.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") {
+          e.preventDefault();
+          document.getElementById("send-button")?.click();
+        }
+      });
+  }
 
   return (
     <div
@@ -94,8 +113,10 @@ const Dialogue = () => {
 
                 scrollRef !== null
                   ? setTimeout(() => {
+                      // @ts-ignore // Ignores because there's already a check for scrollRef not being equal to null
                       scrollRef.current.scrollTo(
                         0,
+                        // @ts-ignore
                         scrollRef.current.scrollHeight
                       );
                     }, 200)
@@ -118,8 +139,10 @@ const Dialogue = () => {
 
                 scrollRef !== null
                   ? setTimeout(() => {
+                      // @ts-ignore
                       scrollRef.current.scrollTo(
                         0,
+                        // @ts-ignore
                         scrollRef.current.scrollHeight
                       );
                     }, 200)
@@ -128,6 +151,7 @@ const Dialogue = () => {
             }}
           >
             <textarea
+              id="text-area-input"
               value={prompt}
               onInput={(e: React.ChangeEvent<HTMLTextAreaElement>) => {
                 setPrompt(e.target.value);
@@ -137,6 +161,7 @@ const Dialogue = () => {
               placeholder="Спроси о чем-нибудь..."
             ></textarea>
             <button
+              id="send-button"
               type="submit"
               className="p-[11px] bg-[#1C64F2] rounded-[8px] absolute right-[20px] top-[14px] active:bg-[#073ca4]"
               style={{ boxShadow: "0px 1px 1px 0px #FFFFFF66 inset" }}
