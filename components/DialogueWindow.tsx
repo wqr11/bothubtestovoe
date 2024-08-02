@@ -3,13 +3,17 @@ import { ChatCompletionRequestMessage } from "openai-edge";
 import BotAnswer from "./BotAnswer";
 import UserAnswer from "./UserAnswer";
 
+import styles from "@/styles/HomePage.module.css";
+
 const DialogueWindow = ({
   messages,
 }: {
   messages: ChatCompletionRequestMessage[];
 }) => {
   return (
-    <div className="overflow-y-scroll max-h-[420px] pb-[50px] relative z-20">
+    <div
+      className={`${styles.dialogue_window} overflow-y-scroll max-h-[370px] relative z-20`}
+    >
       {messages.map((message, idx) =>
         message.role === "user" ? (
           <UserAnswer

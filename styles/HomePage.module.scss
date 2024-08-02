@@ -131,6 +131,13 @@
   }
 }
 
+.dialogue_window {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 .dialogue_input {
   scrollbar-width: none;
   &::placeholder {
