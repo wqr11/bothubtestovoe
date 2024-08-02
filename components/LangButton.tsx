@@ -27,19 +27,21 @@ const LangButton = () => {
         e.preventDefault();
         setMenuHidden(!menuHidden);
       }}
-      className={`${styles.lang_icon} flex gap-[6px] items-center hover:cursor-pointer relative`}
+      className={`${styles.lang_icon} hover:cursor-pointer relative`}
     >
-      <span className={`${styles.lang_button}`}>
-        <Lang />
-      </span>
-      <h6 className="font-bold">RU</h6>
-      <span
-        className={`${styles.arrow_down} ${
-          !menuHidden ? "rotate-180" : "rotate-0"
-        }`}
-      >
-        <ArrowDown />
-      </span>
+      <div className={styles.lang_button}>
+        <span className={`${styles.lang_svg}`}>
+          <Lang />
+        </span>
+        <h6 className="font-bold">RU</h6>
+        <span
+          className={`${styles.arrow_down} ${
+            !menuHidden ? "rotate-180" : "rotate-0"
+          }`}
+        >
+          <ArrowDown />
+        </span>
+      </div>
       {!menuHidden && (
         <div
           className={`${styles.lang_dropdown} absolute top-[40px] left-0 flex flex-col gap-[12px] py-[16px] px-[28px] font-semibold text-[16px] bg-[#222B44] border-[1px] border-[#313E62] rounded-[8px]`}

@@ -120,11 +120,13 @@
   }
 }
 
-.lang_icon {
-  &:hover,
-  &:focus-within {
+.lang_button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  &:hover {
     color: colors.$accent_blue;
-    .lang_button {
+    .lang_svg {
       svg {
         path {
           fill: colors.$accent_blue;

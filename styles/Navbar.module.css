@@ -102,13 +102,18 @@
   stroke: #1c64f2;
 }
 
-.lang_icon:hover, .lang_icon:focus-within {
+.lang_button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.lang_button:hover {
   color: #1c64f2;
 }
-.lang_icon:hover .lang_button svg path, .lang_icon:focus-within .lang_button svg path {
+.lang_button:hover .lang_svg svg path {
   fill: #1c64f2;
 }
-.lang_icon:hover .arrow_down svg path, .lang_icon:focus-within .arrow_down svg path {
+.lang_button:hover .arrow_down svg path {
   stroke: #1c64f2;
 }
 
