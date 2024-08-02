@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, use, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 
 import getChatCompletion from "@/actions/getChatCompletion";
 import { ChatCompletionRequestMessage } from "openai-edge";
@@ -89,7 +89,7 @@ const Dialogue = () => {
       </div>
       <div
         ref={scrollRef}
-        className="overflow-y-scroll max-h-[420px] pb-[32px] relative z-20"
+        className="overflow-y-scroll max-h-[380px] pb-[30px] relative z-20"
       >
         {messages.map((message, idx) =>
           message.role === "user" ? (
